@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  font-family: sans-serif;
+  font-family: 'Shabnam', sans-serif;
   background-color: #ffffff;
 }
 
@@ -11,21 +11,20 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 30px;
   flex-wrap: wrap;
+  position: relative;
 }
 
-.header-section {
-  flex: 1;
+.site-title {
   text-align: center;
+  flex: 1;
+  font-size: 20px;
 }
 
 .search-box {
-  text-align: left;
-}
-
-.auth-links {
-  text-align: right;
+  position: absolute;
+  right: 30px;
 }
 
 .search-box input {
@@ -34,38 +33,68 @@ body {
   border-radius: 4px;
 }
 
+/* ورود / ثبت‌نام */
+.auth-links {
+  position: absolute;
+  left: 30px;
+  background-color: white;
+  padding: 6px 12px;
+  border-radius: 10px;
+  color: #0b0d3f;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.auth-links a {
+  color: #0b0d3f;
+  text-decoration: none;
+  margin: 0 3px;
+}
+
 /* منوی پایین‌تر */
 .main-nav {
-  background-color: #d7b451;
+  background-color: #ffffff;
   color: #0b0d3f;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 10px 20px;
   flex-wrap: wrap;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
 }
 
 .main-nav .logo {
-  font-size: 20px;
-  font-weight: bold;
-  margin-left: 20px;
+  display: none; /* حذف لوگو فعلاً */
 }
 
 .main-nav ul {
   list-style: none;
   display: flex;
+  gap: 20px;
   padding: 0;
   margin: 0;
-  gap: 20px;
-  flex-wrap: wrap;
+}
+
+.main-nav ul li {
+  font-size: 15px;
+  font-weight: 500;
+  position: relative;
+}
+
+.main-nav ul li:not(:last-child)::after {
+  content: '|';
+  position: absolute;
+  left: -10px;
+  color: #ccc;
 }
 
 .main-nav ul li a {
   text-decoration: none;
   color: #0b0d3f;
-  font-weight: bold;
   transition: color 0.3s ease;
 }
 
 .main-nav ul li a:hover {
-  color: white;
+  color: #d7b451;
 }
