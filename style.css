@@ -89,7 +89,7 @@ body {
   content: "";
   position: absolute;
   top: 0; right: 0; bottom: 0; left: 0;
-  background-image: linear-gradient(rgba(11, 13, 63, 0.6), rgba(11, 13, 63, 0.6)), url('images/bg.jpg');
+  background-image: linear-gradient(rgba(11, 13, 63, 0.9), rgba(11, 13, 63, 0.9)), url('images/bg.jpg');
   background-size: cover;
   background-position: center;
   opacity: 0.6;
