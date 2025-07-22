@@ -64,7 +64,24 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  gap: 30px;
+  gap: 0; /* gap رو صفر کردم چون جداکننده داریم */
+}
+
+.main-nav li {
+  position: relative;
+  padding: 0 10px;
+}
+
+.main-nav li:not(:last-child)::after {
+  content: "|";
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  color: #0b0d3f;
+  opacity: 0.6;
+  padding-left: 10px;
+  font-weight: bold;
 }
 
 .main-nav li a {
@@ -88,7 +105,6 @@ body {
   overflow: hidden;
 }
 
-
 .hero::before {
   content: "";
   position: absolute;
@@ -96,7 +112,6 @@ body {
   background-color: rgba(11, 13, 63, 0.6); /* لایه نیمه‌شفاف آبی تیره */
   z-index: 1;
 }
-
 
 .hero-overlay {
   position: relative;
