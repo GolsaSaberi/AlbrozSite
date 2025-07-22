@@ -73,6 +73,18 @@ body {
   color: #0b0d3f;
 }
 
+/* حذف خط زیر لینک‌ها */
+.main-nav li a {
+  text-decoration: none;
+  color: #0b0d3f;
+  transition: color 0.3s ease;
+}
+
+/* رنگ طلایی هنگام هاور */
+.main-nav li a:hover {
+  color: #d7b451;
+}
+
 /* جداکننده | بعد از همه آیتم‌ها */
 .main-nav li::after {
   content: " |";
@@ -81,7 +93,10 @@ body {
   padding-left: 5px;
 }
 
-/* توجه: اینجا دیگه هیچ کدی برای حذف جداکننده آخرین آیتم نیست */
+/* حذف جداکننده برای آخرین آیتم */
+.main-nav li:last-child::after {
+  content: "";
+}
 
 /* سکشن hero */
 .hero {
