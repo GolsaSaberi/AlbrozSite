@@ -48,8 +48,8 @@
       <!-- فرم ورود -->
       <form class="auth-form" id="loginForm">
         <h2>ورود</h2>
-        <input type="text" placeholder="نام کاربری" required />
-        <input type="password" placeholder="رمز عبور" required />
+        <input type="text" name="username" placeholder="نام کاربری" required />
+        <input type="password" name="password" placeholder="رمز عبور" required />
         <button type="submit">ورود</button>
         <p>حساب ندارید؟ <a href="#" id="showSignup">ثبت‌نام</a></p>
       </form>
@@ -57,9 +57,8 @@
       <!-- فرم ثبت‌نام -->
       <form class="auth-form" id="signupForm" style="display: none;">
         <h2>ثبت‌نام</h2>
-        <input type="text" placeholder="نام کامل" required />
-        <input type="email" placeholder="ایمیل" required />
-        <input type="password" placeholder="رمز عبور" required />
+        <input type="text" name="username" placeholder="نام کاربری" required />
+        <input type="password" name="password" placeholder="رمز عبور" required />
         <button type="submit">ثبت‌نام</button>
         <p>حساب دارید؟ <a href="#" id="showLogin">ورود</a></p>
       </form>
