@@ -41,12 +41,12 @@ document.addEventListener('DOMContentLoaded', function () {
     signupForm.style.display = 'none';
   });
 
-  // بستن مودال
+  // بستن مودال با دکمه ضربدر
   closeBtn.addEventListener('click', function () {
     modal.style.display = 'none';
   });
 
-  // بستن مودال با کلیک بیرون از فرم
+  // بستن مودال با کلیک خارج از محتوا
   window.addEventListener('click', function (e) {
     if (e.target === modal) {
       modal.style.display = 'none';
@@ -66,6 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (user) {
       alert('ورود موفقیت‌آمیز بود!');
       modal.style.display = 'none';
+      loginForm.reset();
     } else {
       alert('نام کاربری یا رمز عبور اشتباه است!');
     }
@@ -76,6 +77,11 @@ document.addEventListener('DOMContentLoaded', function () {
     e.preventDefault();
     const username = signupForm.username.value.trim();
     const password = signupForm.password.value.trim();
+
+    if (!username || !password) {
+      alert('لطفاً تمام فیلدها را پر کنید.');
+      return;
+    }
 
     const exists = users.some((u) => u.username === username);
     if (exists) {
