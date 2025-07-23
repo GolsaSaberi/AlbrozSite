@@ -67,30 +67,29 @@ body {
 
 .main-nav li {
   position: relative;
-  padding: 0 5px;
+  padding: 0 10px;
   font-weight: bold;
   font-size: 1rem;
-  color: #0b0d3f;
 }
 
-/* حذف خط زیر لینک‌ها */
+/* لینک‌ها */
 .main-nav li a {
   text-decoration: none;
   color: #0b0d3f;
   transition: color 0.3s ease;
 }
 
-/* رنگ طلایی هنگام هاور */
+/* تغییر رنگ لینک‌ها در هاور */
 .main-nav li a:hover {
   color: #d7b451;
 }
 
-/* جداکننده | بعد از همه آیتم‌ها */
+/* جداکننده بین آیتم‌ها */
 .main-nav li::after {
   content: " |";
   color: #0b0d3f;
   opacity: 0.6;
-  padding-left: 5px;
+  padding-right: 10px;
 }
 
 /* حذف جداکننده برای آخرین آیتم */
@@ -98,41 +97,39 @@ body {
   content: "";
 }
 
-/* سکشن hero */
-.hero {
-  position: relative;
-  width: 100%;
-  height: 90vh;
-  background-image: url('images/bg.jpg');
-  background-size: cover;
-  background-position: center;
+/* hero جدید به صورت باکس وسط صفحه با تصویر و گوشه گرد */
+.hero-box {
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+  height: 85vh;
+  background-color: #fff;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0; right: 0; bottom: 0; left: 0;
-  background-color: rgba(11, 13, 63, 0.6);
-  z-index: 1;
-}
-
-.hero-overlay {
-  position: relative;
-  z-index: 2;
-  text-align: center;
+.hero-content {
+  background-image: url('images/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 80%;
+  max-width: 1100px;
+  height: 65vh;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   color: white;
-  max-width: 80%;
+  padding: 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
 }
 
-.hero-overlay h1 {
+.hero-content h1 {
   font-size: 2.5rem;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  text-align: center;
 }
 
-.hero-overlay p {
+.hero-content p {
   font-size: 1.2rem;
+  text-align: center;
 }
