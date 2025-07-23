@@ -219,6 +219,284 @@ body {
 .auth-form {
   display: flex;
   flex-direction: column;
+@import url('https://fonts.googleapis.com/css2?family=Shabnam:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Shabnam', sans-serif;
+  direction: rtl;
+  background-color: #fff;
+  color: #0b0d3f;
+  line-height: 1.6;
+}
+
+/* هدر بالا */
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0b0d3f;
+  color: white;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.search-box input {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Shabnam', sans-serif;
+}
+
+.login-box {
+  background-color: white;
+  color: #0b0d3f;
+  padding: 6px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+.login-box a {
+  color: #0b0d3f;
+  text-decoration: none;
+  margin: 0 5px;
+  transition: color 0.3s;
+}
+
+.login-box a:hover {
+  color: #d7b451;
+}
+
+/* منوی پایین */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d7b451;
+  padding: 12px 20px;
+  position: sticky;
+  top: 60px;
+  z-index: 99;
+}
+
+.main-nav .logo {
+  position: absolute;
+  right: 20px;
+  font-size: 1.8rem;
+}
+
+.main-nav ul {
+  display: flex;
+  list-style: none;
+}
+
+.main-nav li {
+  padding: 0 15px;
+  font-weight: bold;
+}
+
+.main-nav li a {
+  text-decoration: none;
+  color: #0b0d3f;
+  transition: color 0.3s;
+  font-size: 1.1rem;
+}
+
+.main-nav li a:hover {
+  color: #fff;
+}
+
+.main-nav li::after {
+  content: "|";
+  color: #0b0d3f;
+  opacity: 0.6;
+  padding-right: 15px;
+}
+
+.main-nav li:last-child::after {
+  content: "";
+}
+
+/* بخش Hero */
+.hero-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+  background-color: #f5f5f5;
+  margin-bottom: 30px;
+}
+
+.hero-content {
+  background-image: url('images/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 85%;
+  height: 70vh;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.2);
+}
+
+.hero-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(11, 13, 63, 0.5);
+  z-index: 1;
+}
+
+.hero-content h1,
+.hero-content p {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  max-width: 600px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* بخش درباره ما */
+.about-section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.about-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.about-image {
+  width: 45%;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+.about-text {
+  width: 50%;
+  padding: 20px;
+}
+
+.about-text h2 {
+  color: #0b0d3f;
+  font-size: 2rem;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.about-text h2::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -10px;
+  width: 80px;
+  height: 4px;
+  background-color: #d7b451;
+}
+
+.about-text p {
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+/* مودال و فرم‌ها */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 450px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: modalFadeIn 0.3s;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 28px;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #0b0d3f;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
 }
 
 .auth-form h2 {
@@ -304,6 +582,43 @@ body {
   }
   
   .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  
+  .modal-content {
+    width: 95%;
+    padding: 20px;
+  }
+  
+  .about-container {
+    flex-direction: column;
+  }
+  
+  .about-image, 
+  .about-text {
+    width: 100%;
+  }
+  
+  .about-image {
+    margin-bottom: 30px;
+  }
+  
+  .about-text {
+    padding: 0;
+  }
+  
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+  
+  .about-text p {
+    font-size: 1rem;
+  }
+}
     font-size: 2rem;
   }
   
