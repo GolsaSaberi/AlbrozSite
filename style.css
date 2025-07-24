@@ -181,17 +181,23 @@ body {
   padding: 0 20px;
 }
 
-/* در فایل style.css */
 .about-image {
-  width: 40%;
+  width: 40%; /* اندازه متوسط بین 35% و 45% */
+  min-width: 300px; /* حداقل عرض برای جلوگیری از کوچک شدن بیش از حد */
 }
 
 .about-image img {
   width: 100%;
-  max-width: 300px; /* حداکثر عرض */
   height: auto;
-  border-radius: 15px; /* کاهش گردی گوشه‌ها */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* سایه ملایم‌تر */
+  border-radius: 18px; /* گردی متوسط */
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12); /* سایه متعادل */
+  object-fit: cover;
+  aspect-ratio: 1/1; /* نسبت مربعی */
+  transition: transform 0.3s ease; /* انیمیشن هنگام هاور */
+}
+
+.about-image img:hover {
+  transform: scale(1.03); /* اثر بزرگ شدن جزئی هنگام هاور */
 }
 
 .about-text {
