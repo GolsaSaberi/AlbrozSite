@@ -9,7 +9,7 @@
 body {
   font-family: 'Shabnam', sans-serif;
   direction: rtl;
-  background-image: url('images/Watermarkbg.jpg');
+  background-image: url('images/background.jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center center;
@@ -257,6 +257,94 @@ body::before {
   text-align: justify;
 }
 
+/* بخش پروژه‌ها */
+.projects-section {
+  padding: 60px 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  margin: 30px;
+  border-radius: 15px;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-header h2 {
+  color: #0b0d3f;
+  font-size: 2.2rem;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+}
+
+.divider {
+  width: 100px;
+  height: 4px;
+  background-color: #d7b451;
+  margin: 10px auto;
+}
+
+.projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+  height: 220px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.05);
+}
+
+.project-info {
+  padding: 20px;
+  text-align: center;
+}
+
+.project-info h3 {
+  color: #0b0d3f;
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.project-address, .project-year {
+  color: #555;
+  font-size: 0.95rem;
+  margin: 8px 0;
+}
+
+.project-year {
+  font-weight: bold;
+  color: #d7b451;
+}
+
 /* مودال و فرم‌ها */
 .modal {
   position: fixed;
@@ -383,7 +471,8 @@ body::before {
     font-size: 2.2rem;
   }
   
-  .about-section {
+  .about-section, 
+  .projects-section {
     margin: 20px;
   }
 }
@@ -430,7 +519,8 @@ body::before {
     padding: 20px;
   }
   
-  .about-section {
+  .about-section,
+  .projects-section {
     margin: 15px;
     padding: 40px 0;
   }
@@ -467,8 +557,17 @@ body::before {
     font-size: 1.5rem;
   }
   
-  .about-section {
+  .about-section,
+  .projects-section {
     margin: 10px;
     padding: 30px 0;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+  
+  .project-image {
+    height: 180px;
   }
 }
